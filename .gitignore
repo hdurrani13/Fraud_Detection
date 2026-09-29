@@ -1,0 +1,13 @@
+# Dataset (150 MB, too big for GitHub; see data/README.md)
+data/*.csv
+
+# Trained model (rebuild with `python -m fraud.train`)
+models/
+
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,146 @@
+{
+  "rows": {
+    "fit": 182276,
+    "val": 45569,
+    "test": 56962
+  },
+  "fraud_rate": {
+    "fit": 0.0020024578112313196,
+    "val": 0.0011411266431126425,
+    "test": 0.001316667251852112
+  },
+  "review_cost_per_flag": 5.0,
+  "comparison": {
+    "Baseline (always legit)": {
+      "val": {
+        "pr_auc": 0.0011411266431126425,
+        "roc_auc": 0.5,
+        "recall_at_90_precision": 0.0
+      },
+      "test": {
+        "pr_auc": 0.001316667251852112,
+        "roc_auc": 0.5,
+        "recall_at_90_precision": 0.0
+      }
+    },
+    "Logistic regression": {
+      "val": {
+        "pr_auc": 0.7340947957416768,
+        "roc_auc": 0.9742610960232947,
+        "recall_at_90_precision": 0.5576923076923077
+      },
+      "test": {
+        "pr_auc": 0.736549960907658,
+        "roc_auc": 0.983723756452851,
+        "recall_at_90_precision": 0.6933333333333334
+      }
+    },
+    "Random forest": {
+      "val": {
+        "pr_auc": 0.7660355895889688,
+        "roc_auc": 0.954255257122867,
+        "recall_at_90_precision": 0.75
+      },
+      "test": {
+        "pr_auc": 0.8071008325569227,
+        "roc_auc": 0.9577668008508096,
+        "recall_at_90_precision": 0.76
+      }
+    },
+    "Gradient boosting": {
+      "val": {
+        "pr_auc": 0.748976680208425,
+        "roc_auc": 0.9786890696797985,
+        "recall_at_90_precision": 0.7307692307692307
+      },
+      "test": {
+        "pr_auc": 0.800316239544492,
+        "roc_auc": 0.9854019371736953,
+        "recall_at_90_precision": 0.7466666666666667
+      }
+    }
+  },
+  "best_model": "Random forest",
+  "threshold": 0.023281327069081047,
+  "test_at_chosen_threshold": {
+    "threshold": 0.023281327069081047,
+    "flagged": 279,
+    "true_positives": 63,
+    "false_positives": 216,
+    "false_negatives": 12,
+    "precision": 0.22580645161290322,
+    "recall": 0.84,
+    "fraud_dollars_caught": 5359.06,
+    "fraud_dollars_missed": 2370.2,
+    "review_cost": 1395.0,
+    "total_cost": 3765.2
+  },
+  "test_at_default_0.5": {
+    "threshold": 0.5,
+    "flagged": 52,
+    "true_positives": 51,
+    "false_positives": 1,
+    "false_negatives": 24,
+    "precision": 0.9807692307692307,
+    "recall": 0.68,
+    "fraud_dollars_caught": 3787.67,
+    "fraud_dollars_missed": 3941.59,
+    "review_cost": 260.0,
+    "total_cost": 4201.59
+  },
+  "test_with_no_model": {
+    "threshold": 1.0,
+    "flagged": 0,
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 75,
+    "precision": 0.0,
+    "recall": 0.0,
+    "fraud_dollars_caught": 0.0,
+    "fraud_dollars_missed": 7729.26,
+    "review_cost": 0.0,
+    "total_cost": 7729.26
+  },
+  "top_features": [
+    [
+      "V12",
+      0.0191
+    ],
+    [
+      "V16",
+      0.0174
+    ],
+    [
+      "V11",
+      0.0122
+    ],
+    [
+      "V3",
+      0.009
+    ],
+    [
+      "V14",
+      0.0087
+    ],
+    [
+      "V1",
+      0.0058
+    ],
+    [
+      "V4",
+      0.0058
+    ],
+    [
+      "V9",
+      0.0011
+    ],
+    [
+      "V10",
+      0.0011
+    ],
+    [
+      "V2",
+      -0.0
+    ]
+  ]
+}
